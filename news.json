@@ -1,0 +1,26 @@
+[
+  {
+    "img": "images/event-shorofat-park.jpg",
+    "kicker": { "ar": "بيبسي × منتزه شرفات", "en": "Pepsi × Shorofat Park" },
+    "title": { "ar": "نجاح تنظيم فعاليات العيد وسط حضور جماهيري كبير", "en": "Eid events delivered to a large public turnout" },
+    "text": { "ar": "أكثر من 20,000 زائر خلال أيام العيد، مع تجهيز كامل وإدارة حشود وبرمجة ترفيهية متواصلة.", "en": "20,000+ visitors across the Eid days, with full setup, crowd management and continuous entertainment programming." },
+    "link": "",
+    "id": ""
+  },
+  {
+    "img": "images/news-mood-camp.svg",
+    "kicker": { "ar": "مود كامب", "en": "Mood Camp" },
+    "title": { "ar": "من مخيّم واحد إلى شركة فعاليات متكاملة", "en": "From a single camp to a full event company" },
+    "text": { "ar": "البداية التي تشكّلت منها فلسفة مود إيفنت في التجربة والتنفيذ.", "en": "The beginning that shaped Mood Event's philosophy of experience and execution." },
+    "link": "mood-camp.html",
+    "id": "moodcamp"
+  },
+  {
+    "img": "images/news-asian-athletics.svg",
+    "kicker": { "ar": "تكريم", "en": "Recognition" },
+    "title": { "ar": "بطولة آسيا للناشئين السادسة لألعاب القوى", "en": "6th Asian Junior Athletics Championships" },
+    "text": { "ar": "تقدير لدور مود إيفنت في خدمات الضيافة وحفل الافتتاح.", "en": "Recognition for Mood Event's role in catering and the opening ceremony." },
+    "link": "",
+    "id": ""
+  }
+]

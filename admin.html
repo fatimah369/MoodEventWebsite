@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تحرير الأخبار · مود إيفنت</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --bg:#F5F2F7; --card:#fff; --line:rgba(30,16,42,.14);
+      --ink:#1B1420; --dim:rgba(27,20,32,.6); --magenta:#B22EC9; --plum:#601C6C;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:"Cairo",system-ui,"Segoe UI",sans-serif;line-height:1.7}
+    .wrap{max-width:900px;margin:0 auto;padding:28px 18px 80px}
+    header.top{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-bottom:8px}
+    h1{font-size:1.5rem;margin:0}
+    .note{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:.86rem;color:var(--dim);margin:14px 0 22px}
+    .note b{color:var(--ink)}
+    .toolbar{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+    button,.filebtn{
+      font-family:inherit;font-size:.9rem;font-weight:600;cursor:pointer;
+      border:1px solid var(--line);border-radius:10px;padding:10px 16px;background:#fff;color:var(--ink);
+      transition:background .15s,border-color .15s,transform .1s;
+    }
+    button:hover,.filebtn:hover{background:#faf6fc;border-color:var(--magenta)}
+    button.primary{background:var(--magenta);border-color:var(--magenta);color:#fff}
+    button.primary:hover{background:var(--plum)}
+    button.ghost-danger{color:#c81f5e;border-color:rgba(200,31,94,.35)}
+    .filebtn input{display:none}
+
+    .item{
+      background:var(--card);border:1px solid var(--line);border-radius:16px;
+      padding:18px 18px 8px;margin-bottom:16px;position:relative;
+    }
+    .item.featured{border-color:var(--magenta);box-shadow:0 0 0 3px rgba(178,46,201,.12)}
+    .item-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+    .badge{font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+      color:var(--magenta);background:rgba(178,46,201,.1);border:1px solid rgba(178,46,201,.25);
+      border-radius:999px;padding:3px 10px}
+    .badge.n{color:var(--dim);background:#f1ecf4;border-color:var(--line)}
+    .item-actions{display:flex;gap:6px}
+    .item-actions button{padding:6px 10px;font-size:.8rem}
+
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px}
+    .full{grid-column:1/-1}
+    label{display:block;font-size:.78rem;font-weight:700;color:var(--dim);margin:0 0 4px}
+    input[type=text],textarea{
+      width:100%;font-family:inherit;font-size:.92rem;color:var(--ink);
+      background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 12px;
+    }
+    input:focus,textarea:focus{outline:none;border-color:var(--magenta)}
+    textarea{min-height:64px;resize:vertical}
+    .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .thumb{width:100%;height:120px;object-fit:cover;border-radius:10px;border:1px solid var(--line);background:#f1ecf4;margin-top:6px}
+    .thumb[hidden]{display:none}
+
+    .footer-bar{
+      position:sticky;bottom:0;background:linear-gradient(180deg,transparent,var(--bg) 30%);
+      padding-top:18px;margin-top:8px;display:flex;flex-wrap:wrap;gap:10px;align-items:center
+    }
+    .count{font-size:.85rem;color:var(--dim);margin-inline-start:auto}
+    code{background:#f1ecf4;border-radius:6px;padding:1px 6px;font-family:ui-monospace,monospace;direction:ltr;display:inline-block}
+    @media(max-width:620px){.grid,.row2{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>تحرير الأخبار</h1>
+    <a href="index.html#news" style="color:var(--magenta);font-weight:600;text-decoration:none">← رجوع للموقع</a>
+  </header>
+
+  <div class="note">
+    هذه أداة محلية لتحرير قسم «آخر الأخبار» بدون كتابة كود. <b>الخطوات:</b>
+    ١) عدّل الأخبار هنا. ٢) اضغط <b>«تنزيل news.json»</b>. ٣) ضع الملف الناتج داخل مجلد الموقع مكان <code>news.json</code> القديم.
+    الخبر الأول يظهر كبطاقة كبيرة (مميّز)، والبقية بطاقات جانبية. ضع الصور في مجلد <code>images/</code> واكتب مسارها مثل <code>images/news-xxx.jpg</code>.
+  </div>
+
+  <div class="toolbar">
+    <button class="primary" id="download">⬇︎ تنزيل news.json</button>
+    <button id="add">＋ إضافة خبر</button>
+    <label class="filebtn">📂 فتح ملف news.json موجود
+      <input type="file" id="loadfile" accept=".json,application/json" />
+    </label>
+    <button id="reload">↻ إعادة تحميل الحالي</button>
+  </div>
+
+  <div id="list"></div>
+
+  <div class="footer-bar">
+    <button class="primary" id="download2">⬇︎ تنزيل news.json</button>
+    <button id="add2">＋ إضافة خبر</button>
+    <span class="count" id="count"></span>
+  </div>
+</div>
+
+<script>
+(function () {
+  var list = document.getElementById('list');
+  var data = [];
+
+  function blank() {
+    return { img: '', kicker: { ar: '', en: '' }, title: { ar: '', en: '' }, text: { ar: '', en: '' }, link: '', id: '' };
+  }
+  function norm(n) {
+    n = n || {};
+    var k = n.kicker || {}, t = n.title || {}, x = n.text || {};
+    return {
+      img: n.img || '',
+      kicker: { ar: k.ar || '', en: k.en || '' },
+      title: { ar: t.ar || '', en: t.en || '' },
+      text: { ar: x.ar || '', en: x.en || '' },
+      link: n.link || '',
+      id: n.id || ''
+    };
+  }
+
+  function field(labelText, value, oninput, textarea) {
+    var wrap = document.createElement('div');
+    var lab = document.createElement('label'); lab.textContent = labelText;
+    var inp = document.createElement(textarea ? 'textarea' : 'input');
+    if (!textarea) inp.type = 'text';
+    inp.value = value || '';
+    inp.addEventListener('input', function () { oninput(inp.value); });
+    wrap.appendChild(lab); wrap.appendChild(inp);
+    return wrap;
+  }
+
+  function render() {
+    list.innerHTML = '';
+    data.forEach(function (n, i) {
+      var card = document.createElement('div');
+      card.className = 'item' + (i === 0 ? ' featured' : '');
+
+      var head = document.createElement('div');
+      head.className = 'item-head';
+      head.innerHTML = '<span class="badge' + (i === 0 ? '' : ' n') + '">' + (i === 0 ? 'مميّز · بطاقة كبيرة' : 'خبر ' + (i + 1)) + '</span>';
+      var acts = document.createElement('div'); acts.className = 'item-actions';
+      var up = document.createElement('button'); up.textContent = '↑'; up.title = 'أعلى';
+      up.onclick = function () { if (i > 0) { data.splice(i - 1, 0, data.splice(i, 1)[0]); render(); } };
+      var dn = document.createElement('button'); dn.textContent = '↓'; dn.title = 'أسفل';
+      dn.onclick = function () { if (i < data.length - 1) { data.splice(i + 1, 0, data.splice(i, 1)[0]); render(); } };
+      var del = document.createElement('button'); del.textContent = 'حذف'; del.className = 'ghost-danger';
+      del.onclick = function () { data.splice(i, 1); render(); };
+      acts.appendChild(up); acts.appendChild(dn); acts.appendChild(del);
+      head.appendChild(acts);
+      card.appendChild(head);
+
+      var grid = document.createElement('div'); grid.className = 'grid';
+
+      var imgWrap = document.createElement('div'); imgWrap.className = 'full';
+      imgWrap.appendChild(field('مسار الصورة (images/...)', n.img, function (v) {
+        n.img = v; thumb.src = v; thumb.hidden = !v;
+      }));
+      var thumb = document.createElement('img'); thumb.className = 'thumb'; thumb.alt = '';
+      thumb.src = n.img; thumb.hidden = !n.img;
+      thumb.onerror = function () { thumb.hidden = true; };
+      thumb.onload = function () { thumb.hidden = false; };
+      imgWrap.appendChild(thumb);
+      grid.appendChild(imgWrap);
+
+      grid.appendChild(field('التصنيف (عربي)', n.kicker.ar, function (v) { n.kicker.ar = v; }));
+      grid.appendChild(field('Kicker (English)', n.kicker.en, function (v) { n.kicker.en = v; }));
+
+      var tAr = field('العنوان (عربي)', n.title.ar, function (v) { n.title.ar = v; }); tAr.className = 'full';
+      grid.appendChild(tAr);
+      var tEn = field('Title (English)', n.title.en, function (v) { n.title.en = v; }); tEn.className = 'full';
+      grid.appendChild(tEn);
+
+      var xAr = field('الوصف (عربي)', n.text.ar, function (v) { n.text.ar = v; }, true); xAr.className = 'full';
+      grid.appendChild(xAr);
+      var xEn = field('Description (English)', n.text.en, function (v) { n.text.en = v; }, true); xEn.className = 'full';
+      grid.appendChild(xEn);
+
+      grid.appendChild(field('رابط عند الضغط (اختياري)، مثل mood-camp.html', n.link, function (v) { n.link = v; }));
+      grid.appendChild(field('مُعرّف داخلي id (اختياري)', n.id, function (v) { n.id = v; }));
+
+      card.appendChild(grid);
+      list.appendChild(card);
+    });
+    document.getElementById('count').textContent = data.length + ' خبر';
+  }
+
+  function download() {
+    var clean = data.map(norm).filter(function (n) { return n.title.ar || n.title.en || n.img; });
+    var blob = new Blob([JSON.stringify(clean, null, 2)], { type: 'application/json' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url; a.download = 'news.json';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  }
+
+  function loadCurrent() {
+    fetch('news.json', { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (arr) { data = (Array.isArray(arr) ? arr : []).map(norm); if (!data.length) data = [blank()]; render(); })
+      .catch(function () { if (!data.length) { data = [blank()]; render(); } });
+  }
+
+  document.getElementById('add').onclick =
+  document.getElementById('add2').onclick = function () { data.push(blank()); render(); window.scrollTo(0, document.body.scrollHeight); };
+  document.getElementById('download').onclick =
+  document.getElementById('download2').onclick = download;
+  document.getElementById('reload').onclick = loadCurrent;
+  document.getElementById('loadfile').onchange = function (e) {
+    var f = e.target.files[0]; if (!f) return;
+    var fr = new FileReader();
+    fr.onload = function () {
+      try {
+        var arr = JSON.parse(fr.result);
+        data = (Array.isArray(arr) ? arr : []).map(norm);
+        if (!data.length) data = [blank()];
+        render();
+      } catch (err) { alert('الملف غير صالح: ' + err.message); }
+    };
+    fr.readAsText(f, 'utf-8');
+  };
+
+  loadCurrent();
+})();
+</script>
+</body>
+</html>

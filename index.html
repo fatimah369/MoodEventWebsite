@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"
+      data-title-ar="مود إيفنت | نصنع وننظم الحدث لتستمتع باللحظة"
+      data-title-en="Mood Event | We create events, you feel the mood">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>مود إيفنت | نصنع وننظم الحدث لتستمتع باللحظة</title>
+  <meta name="description" content="مود إيفنت: شركة إدارة فعاليات قائمة على التجربة في المملكة العربية السعودية: فعاليات الشركات الداخلية، أجنحة المعارض، والفعاليات الخارجية وفعاليات العلامة التجارية." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Arabic display face is GE SS Two (licensed, installed on the client's machines);
+       Cairo is the web fallback that ships everywhere. Baloo Bhaijaan 2 backs up Latin. -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Baloo+Bhaijaan+2:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================ [0] TOP UTILITY BAR ============================ -->
+  <div class="utility">
+    <div class="container">
+      <nav class="utility-links" aria-label="روابط سريعة / Quick links">
+        <a href="#services"><span data-ar>أجنحة المعارض</span><span data-en>Booths</span></a>
+        <span class="utility-sep" aria-hidden="true">·</span>
+        <a href="mood-camp.html"><span data-ar>مود كامب</span><span data-en>Mood Camp</span></a>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Language / اللغة">
+        <button type="button" data-lang-btn="ar" aria-pressed="true">AR</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================ [1] STICKY NAV ============================ -->
+  <header class="nav">
+    <div class="container">
+      <a href="#hero" class="brand" aria-label="Mood Event home">
+        <img class="brand-mark" src="images/logo-mark.png" alt="" />
+      </a>
+
+      <nav class="nav-links" aria-label="التنقل الرئيسي / Main navigation">
+        <a href="#about"><span data-ar>من نحن</span><span data-en>About</span></a>
+        <a href="#work"><span data-ar>أعمالنا</span><span data-en>Work</span></a>
+        <a href="#services"><span data-ar>خدماتنا</span><span data-en>Services</span></a>
+        <a href="#process"><span data-ar>آلية العمل</span><span data-en>Process</span></a>
+        <a href="#contact"><span data-ar>تواصل معنا</span><span data-en>Contact</span></a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn--solid btn--sm">
+          <span data-ar>ابدأ مشروعك</span><span data-en>Start a project</span>
+        </a>
+        <button class="hamburger" aria-label="القائمة / Menu" aria-expanded="false" aria-controls="mobile-panel">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-panel" id="mobile-panel">
+      <a href="#about"><span data-ar>من نحن</span><span data-en>About</span></a>
+      <a href="#work"><span data-ar>أعمالنا</span><span data-en>Work</span></a>
+      <a href="#services"><span data-ar>خدماتنا</span><span data-en>Services</span></a>
+      <a href="#process"><span data-ar>آلية العمل</span><span data-en>Process</span></a>
+      <a href="#news"><span data-ar>الأخبار</span><span data-en>News</span></a>
+      <a href="#contact"><span data-ar>تواصل معنا</span><span data-en>Contact</span></a>
+      <a href="#contact" class="btn btn--solid"><span data-ar>ابدأ مشروعك</span><span data-en>Start a project</span></a>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- ============================ [2] HERO ============================ -->
+  <section class="hero" id="hero">
+    <div class="hero-media" aria-hidden="true">
+      <img class="hero-fallback" src="images/event-pepsi-dammam.jpg" alt="" />
+      <video class="hero-video" autoplay muted loop playsinline poster="images/event-pepsi-dammam.jpg">
+        <!-- Production reel slot: <source src="images/hero.mp4" type="video/mp4"> -->
+      </video>
+    </div>
+    <div class="container">
+      <div class="hero-inner">
+        <span class="eyebrow fade-up" dir="ltr">More than an event, it's a mood</span>
+        <h1 class="fade-up">
+          <span data-ar>نصنع وننظم الحدث</span><span data-en>we create events</span>
+          <span class="line2"><span data-ar>لتستمتع باللحظة</span><span data-en>you feel the mood</span></span>
+        </h1>
+        <p class="hero-sub fade-up">
+          <span data-ar>نعمل مع الشركات والجهات الحكومية في المملكة على تصميم وتنفيذ فعاليات دقيقة، منسجمة مع العلامة التجارية، ومتقنة حتى آخر تفصيل.</span>
+          <span data-en>We partner with corporate and government organizations across the Kingdom to design and deliver precise, on-brand events, executed down to the last detail.</span>
+        </p>
+        <div class="hero-actions fade-up">
+          <a href="#contact" class="btn btn--solid"><span data-ar>ابدأ مشروعك</span><span data-en>Start a project</span></a>
+          <a href="#work" class="btn btn--ghost"><span data-ar>شاهد أعمالنا</span><span data-en>See our work</span></a>
+        </div>
+        <a href="days-calendar.html" class="hero-feature fade-up">
+          <span class="hero-feature-badge"><span data-ar>جديد</span><span data-en>New</span></span>
+          <span data-ar>اكتشف الأيام العالمية لتفعيل الفعاليات لمنشأتك</span><span data-en>Discover world days to activate events for your organization</span>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ [3] PARTNERS BAR ============================ -->
+  <section class="section section--tight partners">
+    <div class="container">
+      <h2><span data-ar>محطّ ثقة كبرى الكيانات</span><span data-en>Trusted by leading organizations</span></h2>
+      <div class="logo-marquee" role="list" aria-label="عملاء مود إيفنت / Mood Event clients">
+        <div class="lm-row" data-dir="ltr">
+          <div class="lm-set">
+            <span class="logo-chip" role="listitem"><img src="images/logos/pepsi.svg" alt="Pepsi" loading="lazy" /></span>
+            <span class="logo-chip logo-chip--lg" role="listitem"><img src="images/logos/aramco.jpg" alt="Saudi Aramco" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/pg.svg" alt="P&amp;G" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/pwc.svg" alt="pwc" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/marsh.svg" alt="Marsh" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/slb.svg" alt="SLB" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/sabic.svg" alt="SABIC" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/shorofat-park.svg" alt="Shorofat Park" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/baker-hughes.svg" alt="Baker Hughes" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/zamil-group.svg" alt="Zamil Group" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/sfd.svg" alt="SFD" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/al-rashed.png" alt="Al Rashed" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/smasco.png" alt="SMASCO" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/sipchem.jpg" alt="Sipchem" loading="lazy" /></span>
+          </div>
+        </div>
+        <div class="lm-row" data-dir="rtl">
+          <div class="lm-set">
+            <span class="logo-chip" role="listitem"><img src="images/logos/al-muhaidib.png" alt="Al Muhaidib" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/alfanar.png" alt="Alfanar" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/alasala.svg" alt="Alasala" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/salehiya.jpg" alt="Salehiya" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/tti.png" alt="TTI" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/riss.jpg" alt="riss" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/ajdan.png" alt="AJDAN" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/switz.png" alt="Switz" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/walaa.png" alt="Walaa" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/linde.svg" alt="Linde" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/nes-fircroft.png" alt="NES Fircroft" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/nov.svg" alt="NOV" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/saipem.svg" alt="SAIPEM" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/arabian-drilling.svg" alt="Arabian Drilling" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/subsea-7.svg" alt="Subsea 7" loading="lazy" /></span>
+          </div>
+        </div>
+        <div class="lm-row" data-dir="ltr">
+          <div class="lm-set">
+            <span class="logo-chip" role="listitem"><img src="images/logos/gallagher.svg" alt="Gallagher" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/tahakkum.png" alt="Tahakkum" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/diaverum.jpg" alt="Diaverum" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/abu-mayar.png" alt="Abu Mayar" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/hajr.svg" alt="Hajr" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/energytech.webp" alt="EnergyTech" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/alansari.png" alt="Alansari" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/acwa.png" alt="ACWA" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/taqa.jpg" alt="TAQA" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/air-products.svg" alt="Air Products" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/alpla.png" alt="ALPLA" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/evostel.png" alt="Evostel" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/aro.jpg" alt="ARO" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/sicim.png" alt="sicim" loading="lazy" /></span>
+            <span class="logo-chip" role="listitem"><img src="images/logos/assayel.png" alt="Assayel" loading="lazy" /></span>
+          </div>
+        </div>
+      </div>
+      <p class="logo-note"><span data-ar>بعض الشعارات رسمية والبعض الآخر نماذج مؤقتة، استبدل الملفات الناقصة في <code>images/logos/</code> بشعارات العملاء الرسمية.</span><span data-en>Some logos are official; the rest are placeholders; replace the remaining files in <code>images/logos/</code> with the clients' official artwork.</span></p>
+    </div>
+  </section>
+
+  <!-- ============================ [4] PORTFOLIO RAIL ============================ -->
+  <section class="section portfolio" id="work">
+    <span class="glow glow--violet" style="width:420px;height:420px;top:-80px;inset-inline-start:-120px" aria-hidden="true"></span>
+    <div class="container">
+      <div class="section-head reveal" style="max-width:640px">
+        <span class="eyebrow"><span data-ar>أعمالنا</span><span data-en>Our work</span></span>
+        <h2><span data-ar>مشاريع <span class="accent">نُفّذت</span></span><span data-en>Projects <span class="accent">delivered</span></span></h2>
+        <p><span data-ar>اختر مشروعاً لاستعراض نطاق العمل والأرقام ومخرجات التنفيذ.</span><span data-en>Pick a project to see its scope, the numbers, and what we delivered on site.</span></p>
+      </div>
+
+      <!-- Active-project showcase -->
+      <div class="showcase reveal" id="showcase">
+        <div class="showcase-feature">
+          <div class="showcase-media">
+            <img id="sc-img" src="images/event-shorofat-park.jpg" alt="" />
+            <span class="sc-cat" id="sc-cat" aria-live="polite"></span>
+          </div>
+          <div class="showcase-body">
+            <span class="sc-client" id="sc-client"></span>
+            <h3 class="sc-name" id="sc-name"></h3>
+            <p class="sc-tagline" id="sc-tagline"></p>
+            <p class="sc-desc" id="sc-desc"></p>
+            <div class="sc-metrics" id="sc-metrics"></div>
+          </div>
+        </div>
+
+        <div class="sc-tabs" id="sc-tabs" role="tablist" aria-label="اختر مشروعاً / Select a project"></div>
+
+        <div class="showcase-highlights">
+          <span class="eyebrow"><span data-ar>نطاق التنفيذ</span><span data-en>Execution scope</span></span>
+          <div class="sc-hl-grid" id="sc-hl-grid"></div>
+        </div>
+      </div>
+
+      <div class="rail-head reveal">
+        <h3><span data-ar>كل الأعمال</span><span data-en>All work</span></h3>
+        <div class="rail-nav">
+          <button class="rail-btn" data-rail="prev" aria-label="السابق / Previous" aria-controls="portfolio-rail">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="rail-btn" data-rail="next" aria-label="التالي / Next" aria-controls="portfolio-rail">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="rail" id="portfolio-rail" tabindex="0" role="region" aria-label="معرض الأعمال / Portfolio">
+
+        <article class="card">
+          <div class="card-img"><img src="images/event-venue-aerial.jpg" alt="حفل إطلاق منتجع الغدير · إدارة المسرح والإنتاج / Al Ghadir Resort launch ceremony" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>إطلاق منتجع</span><span data-en>Resort Launch</span></span>
+            <div class="card-client"><span data-ar>حفل الغدير</span><span data-en>Al Ghadir Ceremony</span></div>
+            <p class="card-scope"><span data-ar>إدارة المسرح والإنتاج السمعي البصري والديكور لحفل إطلاق منتجع الغدير، بحضور محافظ الأحساء.</span><span data-en>Stage management, AV production and decor for the Al Ghadir Resort launch, in the presence of the Governor of Al-Ahsa.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/project-aramco-conferences.svg" alt="مؤتمرات أرامكو الداخلية والخارجية / Aramco corporate conferences" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>مؤتمرات</span><span data-en>Conferences</span></span>
+            <div class="card-client"><span data-ar>أرامكو</span><span data-en>Aramco</span></div>
+            <p class="card-scope"><span data-ar>مؤتمرات داخلية وخارجية وفق المعايير المؤسسية لأرامكو، منها منتدى المواهب الشابة S&amp;P PDP ومؤتمر تحسين إمدادات الطاقة 2025 برعاية OSPAS.</span><span data-en>Internal and external conferences meeting Aramco's institutional standards; incl. the S&amp;P PDP Young Talent Forum and Energy Supply Optimization 2025, sponsored by OSPAS.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/event-shorofat-park.jpg" alt="منتزه شرفات · عيد الفطر 2026، 30 ألف زائر / Shorofat Park Eid Al Fitr 2026" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>فعالية عامة</span><span data-en>Public Event</span></span>
+            <div class="card-client"><span data-ar>منتزه شرفات · عيد الفطر 2026</span><span data-en>Shorofat Park · Eid Al Fitr 2026</span></div>
+            <p class="card-scope"><span data-ar>يومان و30 ألف زائر. تجهيز كامل وديكور وبرمجة ترفيهية وإدارة حشود.</span><span data-en>2 days, 30K visitors. Full setup, decor, entertainment programming and crowd management.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/project-shurafat-park-eid-2025.svg" alt="منتزه شرفات · عيد 2025، 26 ألف زائر / Shurafat Park Eid 2025" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>فعالية عامة</span><span data-en>Public Event</span></span>
+            <div class="card-client"><span data-ar>منتزه شرفات · عيد 2025</span><span data-en>Shurafat Park · Eid 2025</span></div>
+            <p class="card-scope"><span data-ar>ثلاثة أيام و26 ألف زائر. تخطيط تشغيلي وانسيابية الحشود والتحكم في الدخول والخروج.</span><span data-en>3 days, 26K visitors. Operational planning, crowd flow and entry/exit control.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/event-pepsi-dammam.jpg" alt="بيبسي · فعالية رأس السنة ABC Sales Rally 2026 / Pepsi New Year Event" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>فعالية علامة تجارية</span><span data-en>Brand Event</span></span>
+            <div class="card-client"><span data-ar>بيبسي · فعالية رأس السنة</span><span data-en>Pepsi · New Year Event</span></div>
+            <p class="card-scope"><span data-ar>فعالية ABC Sales Rally 2026: الموقع والمسرح وشاشات LED والإنتاج السمعي البصري والضيافة ومحطات طعام حية. تنفيذ متكامل.</span><span data-en>ABC Sales Rally 2026: venue, stage, LED, AV production, hospitality and live food stations. Turnkey.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/project-sea-delta-marine.svg" alt="سي دلتا مارين آند أوفشور · جناح معرض / Sea Delta Marine &amp; Offshore exhibition booth" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>جناح معرض</span><span data-en>Exhibition Booth</span></span>
+            <div class="card-client"><span data-ar>سي دلتا مارين آند أوفشور</span><span data-en>Sea Delta Marine &amp; Offshore</span></div>
+            <p class="card-scope"><span data-ar>جناح جزيرة بمظلة منحنية مضاءة، وجدار عرض للمنتجات، وصالة اجتماعات مستضافة.</span><span data-en>Island stand with an illuminated curved canopy, a product wall and a hosted meeting lounge.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/project-tayseer-booth.svg" alt="تيسير · تصميم وتنفيذ الجناح في معرض Seamless الرياض / Tayseer booth, Seamless Riyadh" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>جناح معرض</span><span data-en>Exhibition Booth</span></span>
+            <div class="card-client"><span data-ar>تيسير</span><span data-en>Tayseer</span></div>
+            <p class="card-scope"><span data-ar>تصميم وتنفيذ الجناح في معرض Seamless الرياض.</span><span data-en>Booth design and execution, Seamless Exhibition Riyadh.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/project-ejada-booth.svg" alt="إجادة · تصميم وتنفيذ الجناح في ملتقى التوظيف بجامعة الملك فهد للبترول والمعادن 2025 / Ejada booth, KFUPM Career Fair 2025" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>جناح معرض</span><span data-en>Exhibition Booth</span></span>
+            <div class="card-client"><span data-ar>إجادة</span><span data-en>Ejada</span></div>
+            <p class="card-scope"><span data-ar>تصميم وتنفيذ الجناح في ملتقى التوظيف بجامعة الملك فهد للبترول والمعادن 2025.</span><span data-en>Booth design and execution, KFUPM Career Fair 2025.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/project-lahint-booth.svg" alt="لاهنت · جناح خدمات الأعمال في معرض ريادة الأعمال 2025 / Lahint Business Services Booth, Entrepreneurship Exhibition 2025" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>جناح معرض</span><span data-en>Exhibition Booth</span></span>
+            <div class="card-client"><span data-ar>لاهنت</span><span data-en>Lahint</span></div>
+            <p class="card-scope"><span data-ar>جناح خدمات الأعمال في معرض ريادة الأعمال 2025 (RAD). راعٍ ماسي، وتحت رعاية الأمير سعود بن نايف بن عبدالعزيز.</span><span data-en>Business Services Booth, Entrepreneurship Exhibition 2025 (RAD). Diamond Sponsor; under the patronage of Prince Saud bin Nayef bin Abdulaziz.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/project-asian-u18-athletics.svg" alt="بطولة آسيا السادسة لألعاب القوى تحت 18 عاماً / 6th Asian U18 Athletics Championships" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>فعالية رياضية</span><span data-en>Sporting Event</span></span>
+            <div class="card-client"><span data-ar>بطولة آسيا لألعاب القوى تحت 18</span><span data-en>6th Asian U18 Athletics Championships</span></div>
+            <p class="card-scope"><span data-ar>29 دولة، وسبعة أيام من خدمات الضيافة، وحفل افتتاح بمشاركة 70 مؤدياً.</span><span data-en>29 countries, 7 days of catering, and an opening ceremony with 70 performers.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/project-acwa-power-annual-day.svg" alt="أكوا باور · احتفال اليوم السنوي / ACWA Power Annual Day Celebration" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>فعالية شركات</span><span data-en>Corporate Event</span></span>
+            <div class="card-client"><span data-ar>أكوا باور</span><span data-en>ACWA Power</span></div>
+            <p class="card-scope"><span data-ar>احتفال اليوم السنوي للشركة، تنفيذ متكامل.</span><span data-en>Annual Day Celebration, turnkey.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/project-netzero-national-day.svg" alt="نت زيرو · اليوم الوطني السعودي 95 في مطارات الدمام / NetZero, Saudi National Day 95 at Dammam Airports" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>مبادرة استدامة</span><span data-en>Sustainability</span></span>
+            <div class="card-client"><span data-ar>نت زيرو</span><span data-en>NetZero</span></div>
+            <p class="card-scope"><span data-ar>اليوم الوطني السعودي 95 في مطارات الدمام، ضمن مبادرة الاستدامة.</span><span data-en>Saudi National Day 95 at Dammam Airports, Sustainability Initiative.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/project-tahakkum-engagement.svg" alt="تحكّم · إشراك الموظفين، خمسة أيام وموقعان و1,840 مشاركاً / Tahakkum Employee Engagement" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>إشراك الموظفين</span><span data-en>Employee Engagement</span></span>
+            <div class="card-client"><span data-ar>تحكّم</span><span data-en>Tahakkum</span></div>
+            <p class="card-scope"><span data-ar>خمسة أيام، وموقعان، و1,840 مشاركاً.</span><span data-en>5 days, 2 sites, 1,840 participants.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/project-imvita-booth.svg" alt="إمفيتا · جناح في معرض السعودية للحيوانات الأليفة / IMVITA booth, Saudi Pet Expo" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>جناح معرض</span><span data-en>Exhibition Booth</span></span>
+            <div class="card-client"><span data-ar>إمفيتا</span><span data-en>IMVITA</span></div>
+            <p class="card-scope"><span data-ar>جناح في معرض السعودية للحيوانات الأليفة.</span><span data-en>Booth, Saudi Pet Expo.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/project-salehiya-eid.svg" alt="الصالحية · فعالية العيد للموظفين، تصميم وإنتاج متكامل / Salehiya Employees' Eid Event" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>فعالية شركات</span><span data-en>Corporate Event</span></span>
+            <div class="card-client"><span data-ar>الصالحية</span><span data-en>Salehiya</span></div>
+            <p class="card-scope"><span data-ar>فعالية العيد للموظفين، تصميم وإنتاج متكامل من البداية إلى النهاية.</span><span data-en>Employees' Eid Event, end-to-end design and production.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/project-aramco-conferences.svg" alt="أرامكو الأحساء · بطولات الصيف / Aramco Al-Ahsa Summer Championships" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>فعالية صيفية</span><span data-en>Summer Event</span></span>
+            <div class="card-client"><span data-ar>أرامكو الأحساء · بطولات الصيف</span><span data-en>Aramco Al-Ahsa · Summer Championships</span></div>
+            <p class="card-scope"><span data-ar>تنظيم وتنفيذ فعالية بطولات الصيف من التخطيط حتى التسليم.</span><span data-en>Organizing and delivering the Summer Championships event from planning to handover.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/project-aramco-conferences.svg" alt="أرامكو الأحساء · موسم الصيف / Aramco Al-Ahsa Summer Season" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>فعالية صيفية</span><span data-en>Summer Season</span></span>
+            <div class="card-client"><span data-ar>أرامكو الأحساء · موسم الصيف</span><span data-en>Aramco Al-Ahsa · Summer Season</span></div>
+            <p class="card-scope"><span data-ar>إدارة برنامج موسم الصيف وتشغيله على مدى الفترة الكاملة.</span><span data-en>Managing and running the Summer Season programme across the full period.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/project-aramco-conferences.svg" alt="أرامكو الأحساء · يوم الآيس كريم / Aramco Al-Ahsa Ice Cream Day" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>يوم عائلي</span><span data-en>Family Day</span></span>
+            <div class="card-client"><span data-ar>أرامكو الأحساء · يوم الآيس كريم</span><span data-en>Aramco Al-Ahsa · Ice Cream Day</span></div>
+            <p class="card-scope"><span data-ar>تجهيز وتشغيل يوم ترفيهي عائلي بكامل عناصره.</span><span data-en>Setting up and running a full family entertainment day.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/project-netzero-national-day.svg" alt="هيئة تطوير المنطقة الشرقية / Eastern Province Development Authority" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>جهة حكومية</span><span data-en>Government</span></span>
+            <div class="card-client"><span data-ar>هيئة تطوير المنطقة الشرقية</span><span data-en>Eastern Province Development Authority</span></div>
+            <p class="card-scope"><span data-ar>تنظيم وتنفيذ فعالية للهيئة وفق المعايير المؤسسية والبروتوكولية.</span><span data-en>Organizing and delivering an authority event to institutional and protocol standards.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/event-venue-aerial.jpg" alt="الهيئة الملكية / The Royal Commission" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>جهة حكومية</span><span data-en>Government</span></span>
+            <div class="card-client"><span data-ar>الهيئة الملكية</span><span data-en>The Royal Commission</span></div>
+            <p class="card-scope"><span data-ar>تنفيذ فعالية للهيئة الملكية بإدارة كاملة للموقع والبرنامج.</span><span data-en>Delivering a Royal Commission event with full venue and programme management.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/event-pepsi-dammam.jpg" alt="بيبسي / Pepsi" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>فعالية علامة تجارية</span><span data-en>Brand Event</span></span>
+            <div class="card-client"><span data-ar>بيبسي</span><span data-en>Pepsi</span></div>
+            <p class="card-scope"><span data-ar>تنفيذ فعالية لعلامة بيبسي من التصميم حتى التشغيل في الموقع.</span><span data-en>Delivering a Pepsi brand event from design through on-site operation.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/event-shorofat-park.jpg" alt="الشرفات بارك / Shorofat Park" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>فعالية عامة</span><span data-en>Public Event</span></span>
+            <div class="card-client"><span data-ar>الشرفات بارك</span><span data-en>Shorofat Park</span></div>
+            <p class="card-scope"><span data-ar>تجهيز وتشغيل فعالية عامة داخل المنتزه مع إدارة الحشود.</span><span data-en>Setting up and running a public event inside the park with crowd management.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/project-aramco-conferences.svg" alt="معهد الطاقة / Energy Institute" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>فعالية مؤسسية</span><span data-en>Corporate Event</span></span>
+            <div class="card-client"><span data-ar>معهد الطاقة</span><span data-en>Energy Institute</span></div>
+            <p class="card-scope"><span data-ar>تنظيم وتنفيذ فعالية مؤسسية لمعهد الطاقة.</span><span data-en>Organizing and delivering a corporate event for the Energy Institute.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/project-salehiya-eid.svg" alt="الصالحية / Salehiya" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>فعالية شركات</span><span data-en>Corporate Event</span></span>
+            <div class="card-client"><span data-ar>الصالحية</span><span data-en>Salehiya</span></div>
+            <p class="card-scope"><span data-ar>تصميم وتنفيذ فعالية شركات من البداية إلى النهاية.</span><span data-en>End-to-end design and production of a corporate event.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/project-shorofat-park-eid-2026.svg" alt="الراشد مول / Al Rashed Mall" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>تفعيل مركز تجاري</span><span data-en>Mall Activation</span></span>
+            <div class="card-client"><span data-ar>الراشد مول</span><span data-en>Al Rashed Mall</span></div>
+            <p class="card-scope"><span data-ar>تفعيل داخل المركز التجاري بتجهيز وديكور وبرمجة للزوار.</span><span data-en>In-mall activation with setup, decor and visitor programming.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/event-venue-aerial.jpg" alt="هيئة التطوير الشرقية بالتعاون مع جزيرة تاروت / Eastern Development Authority with Tarout Island" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>جهة حكومية</span><span data-en>Government</span></span>
+            <div class="card-client"><span data-ar>هيئة التطوير الشرقية × جزيرة تاروت</span><span data-en>Eastern Development Authority × Tarout Island</span></div>
+            <p class="card-scope"><span data-ar>فعالية بالتعاون بين الهيئة وجزيرة تاروت، تنظيم وتنفيذ متكامل.</span><span data-en>An event in cooperation between the authority and Tarout Island, organized and delivered turnkey.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/project-al-ghadir-ceremony.svg" alt="عملاء نفّذنا لهم أعمالاً إضافية / Additional Mood Event clients" loading="lazy" /></div>
+          <div class="card-body">
+            <span class="card-tag"><span data-ar>عملاء آخرون</span><span data-en>Also delivered for</span></span>
+            <div class="card-client"><span data-ar>نفّذنا كذلك لصالح</span><span data-en>Also delivered for</span></div>
+            <p class="card-scope"><span data-ar>سابك · أميانتيت · أصايل · وزارة الموارد البشرية · هيئة تطوير المنطقة الشرقية · جمعية أصدقاء البيئة.</span><span data-en>SABIC · Amiantit · Assayel · Ministry of Human Resources · Eastern Province Development Authority · Environmental Friends Society.</span></p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ [5] STATS BAND ============================ -->
+  <section class="section section--tight stats">
+    <span class="glow glow--magenta" style="width:520px;height:300px;top:-40px;left:50%;transform:translateX(-50%)" aria-hidden="true"></span>
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat reveal"><b>15+</b><span><span data-ar>عاماً من الخبرة</span><span data-en>years of experience</span></span></div>
+        <div class="stat reveal"><b>200+</b><span><span data-ar>فعالية منفذة</span><span data-en>events delivered</span></span></div>
+        <div class="stat reveal"><b>100+</b><span><span data-ar>عميل راضٍ</span><span data-en>satisfied clients</span></span></div>
+        <div class="stat reveal"><b>30K</b><span><span data-ar>زائر</span><span data-en>visitors</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ [6] SERVICES ============================ -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span data-ar>خدماتنا</span><span data-en>Services</span></span>
+        <h2><span data-ar>ثلاثة مجالات <span class="accent">أساسية</span></span><span data-en>Three <span class="accent">core</span> areas</span></h2>
+        <p><span data-ar>نغطي دورة الفعالية كاملة: من التخطيط والتصميم إلى الإنتاج والتنفيذ في الموقع.</span><span data-en>We cover the full event cycle, from planning and design to production and on-site delivery.</span></p>
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service reveal">
+          <div class="service-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3><span data-ar>فعاليات الشركات الداخلية</span><span data-en>Internal corporate events</span></h3>
+          <ul>
+            <li><span data-ar>اللقاءات التنفيذية المفتوحة</span><span data-en>Executive townhalls</span></li>
+            <li><span data-ar>المؤتمرات الداخلية</span><span data-en>Internal conferences</span></li>
+            <li><span data-ar>منتديات القيادة</span><span data-en>Leadership forums</span></li>
+            <li><span data-ar>برامج إشراك الموظفين</span><span data-en>Employee engagement programs</span></li>
+            <li><span data-ar>اجتماعات الاستراتيجية والمواءمة</span><span data-en>Strategy &amp; alignment meetings</span></li>
+          </ul>
+        </article>
+
+        <article class="service reveal">
+          <div class="service-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16v12H4zM4 16l4 4M20 16l-4 4M12 16v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3><span data-ar>أجنحة ومنصات المعارض</span><span data-en>Booths &amp; exhibition stands</span></h3>
+          <ul>
+            <li><span data-ar>أجنحة معارض مصمّمة خصيصاً</span><span data-en>Custom exhibition booths</span></li>
+            <li><span data-ar>منصات المعارض التجارية</span><span data-en>Trade show stands</span></li>
+            <li><span data-ar>تجارب تفاعلية للعلامة التجارية</span><span data-en>Interactive brand experiences</span></li>
+            <li><span data-ar>أجنحة عرض المنتجات</span><span data-en>Product display booths</span></li>
+            <li><span data-ar>التصنيع</span><span data-en>Fabrication</span></li>
+          </ul>
+        </article>
+
+        <article class="service reveal">
+          <div class="service-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M5 8l7-5 7 5M5 8v8l7 5 7-5V8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3><span data-ar>الفعاليات الخارجية وفعاليات العلامة التجارية</span><span data-en>External &amp; brand events</span></h3>
+          <ul>
+            <li><span data-ar>إطلاقات الشركات</span><span data-en>Corporate launches</span></li>
+            <li><span data-ar>الإعلانات الكبرى</span><span data-en>Major announcements</span></li>
+            <li><span data-ar>فعاليات المستثمرين</span><span data-en>Investor events</span></li>
+            <li><span data-ar>فعاليات الشركاء</span><span data-en>Partner events</span></li>
+            <li><span data-ar>تكريم العملاء</span><span data-en>Client appreciation</span></li>
+            <li><span data-ar>المؤتمرات وملتقيات القطاع</span><span data-en>Conferences &amp; industry forums</span></li>
+          </ul>
+        </article>
+
+      </div>
+
+      <div class="capabilities reveal" role="list" aria-label="قدراتنا الداخلية / In-house capabilities">
+        <span class="cap-chip" role="listitem"><span data-ar>جناح خاص</span><span data-en>Special Booth</span></span>
+        <span class="cap-chip" role="listitem"><span data-ar>معارض</span><span data-en>Exhibition</span></span>
+        <span class="cap-chip" role="listitem"><span data-ar>فعالية خاصة</span><span data-en>Special Event</span></span>
+        <span class="cap-chip" role="listitem"><span data-ar>ترفيه</span><span data-en>Entertainment</span></span>
+        <span class="cap-chip" role="listitem"><span data-ar>الإعلان والتسويق</span><span data-en>Advertising &amp; Marketing</span></span>
+        <span class="cap-chip" role="listitem"><span data-ar>المؤتمرات والندوات</span><span data-en>Conferences &amp; Seminars</span></span>
+        <span class="cap-chip" role="listitem"><span data-ar>الصوت والإضاءة</span><span data-en>Sound &amp; Lighting</span></span>
+        <span class="cap-chip" role="listitem"><span data-ar>هولوجرام</span><span data-en>Hologram</span></span>
+        <span class="cap-chip" role="listitem"><span data-ar>تصميم الهوية</span><span data-en>Branding Design</span></span>
+        <span class="cap-chip" role="listitem"><span data-ar>الإنتاج السمعي البصري</span><span data-en>Audio Visual Production</span></span>
+        <span class="cap-chip" role="listitem"><span data-ar>الإسقاط الضوئي</span><span data-en>Video Mapping</span></span>
+        <span class="cap-chip" role="listitem"><span data-ar>المسارح وديكور المسرح</span><span data-en>Staging &amp; Stage Decoration</span></span>
+        <span class="cap-chip" role="listitem"><span data-ar>شاشات LED</span><span data-en>LED Screening</span></span>
+        <span class="cap-chip" role="listitem"><span data-ar>الخيام والمباني الخاصة</span><span data-en>Tents &amp; Custom Building</span></span>
+        <span class="cap-chip" role="listitem"><span data-ar>التصنيع</span><span data-en>Fabrication</span></span>
+        <span class="cap-chip" role="listitem"><span data-ar>الضيافة</span><span data-en>Hospitality</span></span>
+        <span class="cap-chip" role="listitem"><span data-ar>الفنون الاستعراضية</span><span data-en>Performing Arts</span></span>
+        <span class="cap-chip" role="listitem"><span data-ar>التواصل الداخلي</span><span data-en>Internal Communications</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ [7] OUR STORY ============================ -->
+  <section class="section story" id="about">
+    <span class="glow glow--plum" style="width:380px;height:380px;bottom:-60px;inset-inline-end:-100px" aria-hidden="true"></span>
+    <div class="container">
+      <div class="split">
+        <div class="story-media reveal">
+          <img src="images/event-venue-aerial.jpg" alt="موقع فعالية مضاء بالكامل ليلاً / A full event venue lit at night" loading="lazy" />
+          <div class="story-badge"><span data-ar>الرؤية تلتقي الواقع</span><span data-en>Where vision meets reality</span></div>
+        </div>
+        <div class="story-copy reveal">
+          <span class="eyebrow"><span data-ar>قصتنا</span><span data-en>Our story</span></span>
+          <p><span data-ar>تأسست مود إيفنت برؤية استباقية تتجاوز المألوف، لتحوّل المساحات العادية إلى منصات تفاعلية حية، وتجارب استثنائية تُلهم الحواس وتترك أثراً لا يُمحى.</span><span data-en>Mood Event was founded on a forward-looking vision that moves past the familiar, turning ordinary spaces into living, interactive stages and exceptional experiences that engage the senses and leave a lasting mark.</span></p>
+          <p><span data-ar>من فكرة طموحة إلى كيان قيادي متكامل، نمت مود إيفنت عبر إعادة ابتكار معايير إدارة الفعاليات. نحن لا ننظّم المهرجانات والمؤتمرات فحسب؛ بل نبتكر لغة خاصة بكل حدث، ندمج فيها الدقة الهندسية والفكر الإبداعي والتكنولوجيا الحديثة لنخلق بيئة تتنفّس بالتميّز.</span><span data-en>From an ambitious idea to a fully integrated industry leader, Mood Event has grown by reinventing the standards of event management. We don't just run festivals and conferences; we craft a language unique to each event, blending engineering precision, creative thinking and modern technology into an environment that breathes distinction.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ [8] OUR PILLARS ============================ -->
+  <section class="section section--tight" id="pillars">
+    <div class="container">
+      <div class="section-head reveal" style="max-width:640px">
+        <span class="eyebrow"><span data-ar>ركائزنا</span><span data-en>Our pillars</span></span>
+        <h2><span data-ar>خمس ركائز <span class="accent">ثابتة</span></span><span data-en>Five <span class="accent">constant</span> pillars</span></h2>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar reveal">
+          <div class="pillar-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 21l-4.9 2.6.9-5.5-4-3.9L9.5 8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+          <b><span data-ar>قيادة التجربة</span><span data-en>Experience-led</span></b>
+        </div>
+        <div class="pillar reveal">
+          <div class="pillar-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a4 4 0 018-1 4 4 0 018 1c0 5.5-7 10-7 10z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+          <b><span data-ar>تنفيذ بروح</span><span data-en>Soulful Execution</span></b>
+        </div>
+        <div class="pillar reveal">
+          <div class="pillar-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <b><span data-ar>تمييز عالٍ</span><span data-en>High Discernment</span></b>
+        </div>
+        <div class="pillar reveal">
+          <div class="pillar-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/></svg></div>
+          <b><span data-ar>شفافية كاملة</span><span data-en>Full Transparency</span></b>
+        </div>
+        <div class="pillar reveal">
+          <div class="pillar-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <b><span data-ar>موثوقية مثبتة</span><span data-en>Proven Reliability</span></b>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ [9] WHAT MAKES US DIFFERENT ============================ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span data-ar>ما الذي يميّزنا</span><span data-en>What makes us different</span></span>
+        <h2><span data-ar>نصمّم <span class="accent">التجربة</span>، لا القاعة فقط</span><span data-en>We design the <span class="accent">experience</span>, not just the room</span></h2>
+      </div>
+      <div class="diff-grid">
+        <article class="diff reveal">
+          <span class="diff-num">01</span>
+          <div>
+            <h3><span data-ar>تخطيط رحلة الضيف</span><span data-en>Guest Journey Planning</span></h3>
+            <p><span data-ar>نرسم مسار الضيف من لحظة الوصول حتى المغادرة، ونزيل كل نقطة احتكاك في الطريق.</span><span data-en>We map the guest's path from arrival to departure and remove every point of friction along the way.</span></p>
+          </div>
+        </article>
+        <article class="diff reveal">
+          <span class="diff-num">02</span>
+          <div>
+            <h3><span data-ar>توزيع المساحة والانسيابية</span><span data-en>Space Layout &amp; Flow</span></h3>
+            <p><span data-ar>توزيع مدروس يحافظ على حركة سلسة للحضور ويمنع الازدحام في نقاط الالتقاء.</span><span data-en>A considered layout that keeps the audience moving smoothly and prevents congestion at pinch points.</span></p>
+          </div>
+        </article>
+        <article class="diff reveal">
+          <span class="diff-num">03</span>
+          <div>
+            <h3><span data-ar>توقيت الفعالية والأجواء</span><span data-en>Event &amp; Atmosphere Timing</span></h3>
+            <p><span data-ar>نضبط إيقاع البرنامج واللحظات الرئيسية والإضاءة والصوت لتخدم الرسالة في وقتها.</span><span data-en>We pace the programme, its key moments, lighting and sound so each lands at the right time.</span></p>
+          </div>
+        </article>
+        <article class="diff reveal">
+          <span class="diff-num">04</span>
+          <div>
+            <h3><span data-ar>لحظات تفاعل الجمهور</span><span data-en>Audience Interaction Moments</span></h3>
+            <p><span data-ar>نصمّم نقاط تفاعل مقصودة تُبقي الحضور مشاركين لا متفرجين.</span><span data-en>We design deliberate interaction points that keep the audience participating, not just watching.</span></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ [10] PROCESS FLOW ============================ -->
+  <section class="section process" id="process">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span data-ar>آلية العمل</span><span data-en>Process</span></span>
+        <h2><span data-ar>أربع خطوات <span class="accent">واضحة</span></span><span data-en>Four <span class="accent">clear</span> steps</span></h2>
+      </div>
+      <div class="process-grid">
+        <div class="step reveal">
+          <div class="step-num" aria-hidden="true">01</div>
+          <h3><span data-ar>المواءمة</span><span data-en>Align</span></h3>
+          <p><span data-ar>تحديد الهدف والغرض، ومراجعة المساحة وقيودها، وتأكيد احتياجات التوزيع.</span><span data-en>Define objective &amp; purpose, review space &amp; limitations, confirm layout needs.</span></p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num" aria-hidden="true">02</div>
+          <h3><span data-ar>التصميم والاعتماد</span><span data-en>Design &amp; Approval</span></h3>
+          <p><span data-ar>إعداد التصميم ثلاثي الأبعاد للجناح، واختيار المواد والتشطيبات، والتحقق من جدوى التنفيذ.</span><span data-en>Create the 3D booth design, select materials &amp; finishes, check build feasibility.</span></p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num" aria-hidden="true">03</div>
+          <h3><span data-ar>الإنتاج والتحضير</span><span data-en>Production &amp; Preparation</span></h3>
+          <p><span data-ar>إعداد المخططات والمواصفات، والتصنيع وتوريد المواد، وضبط الجودة.</span><span data-en>Prepare drawings &amp; specs, fabricate &amp; source materials, quality control.</span></p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num" aria-hidden="true">04</div>
+          <h3><span data-ar>التنفيذ والتسليم في الموقع</span><span data-en>On-site Execution &amp; Delivery</span></h3>
+          <p><span data-ar>التركيب وفق التصميم ثلاثي الأبعاد، وتنفيذ كل التفاصيل، والفحص النهائي للجودة، والتسليم.</span><span data-en>Install per the 3D design, execute all details, final quality check, handover.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ [10b] VISION 2030 ============================ -->
+  <section class="section vision2030" id="vision2030">
+    <span class="glow glow--violet" style="width:420px;height:360px;top:-40px;inset-inline-start:-120px" aria-hidden="true"></span>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span data-ar>رؤية 2030</span><span data-en>Vision 2030</span></span>
+        <h2><span data-ar>نُسهم في <span class="accent">المستهدفات الوطنية</span></span><span data-en>Contributing to Saudi Arabia's <span class="accent">national goals</span></span></h2>
+        <p><span data-ar>تدعم عمليات إدارة الفعاليات لدينا ثلاث ركائز من رؤية 2030 بشكل مباشر: مجتمع حيوي، واقتصاد مزدهر، ووطن طموح.</span><span data-en>Our events management operations directly support three pillars of Vision 2030: a vibrant society, a thriving economy, and an ambitious nation.</span></p>
+      </div>
+
+      <div class="v2030-pillars reveal">
+        <div class="v2030-pillar">
+          <div class="v2030-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 21l-4.9 2.6.9-5.5-4-3.9L9.5 8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+          <b><span data-ar>السياحة والترفيه</span><span data-en>Tourism &amp; Entertainment</span></b>
+          <span><span data-ar>نمو القطاع</span><span data-en>Sector growth</span></span>
+        </div>
+        <div class="v2030-pillar">
+          <div class="v2030-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20v-8h4v8M10 20v-12h4v12M16 20v-6h4v6M3 20h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <b><span data-ar>الوظائف</span><span data-en>Jobs</span></b>
+          <span><span data-ar>تُستحدث مباشرة وغير مباشرة</span><span data-en>Created directly &amp; indirectly</span></span>
+        </div>
+        <div class="v2030-pillar">
+          <div class="v2030-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M9 11a3 3 0 100-6 3 3 0 000 6zM17 11a3 3 0 100-6M3 20a6 6 0 0112 0M15 20a6 6 0 016-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <b><span data-ar>المجتمع</span><span data-en>Community</span></b>
+          <span><span data-ar>تفعيل ومشاركة مجتمعية</span><span data-en>Engagement &amp; activations</span></span>
+        </div>
+      </div>
+
+      <div class="v2030-points">
+        <article class="v2030-point reveal">
+          <h3><span data-ar>تفعيل وجهات المملكة</span><span data-en>Activating Saudi Arabia's destinations</span></h3>
+          <p><span data-ar>ننفّذ فعاليات داخلية في المراكز التجارية والمجمعات السكنية والمشاريع متعددة الاستخدامات، فنحوّل المساحات اليومية إلى وجهات حيّة تزيد الحركة، وتطيل مدة البقاء، وترسّخ مكانة المملكة مركزاً رائداً للفعاليات.</span><span data-en>We activate internal events within commercial malls, residential complexes and mixed-use developments, turning everyday spaces into live destinations that drive foot traffic, increase dwell time, and position Saudi Arabia as a leading events hub.</span></p>
+        </article>
+        <article class="v2030-point reveal">
+          <h3><span data-ar>بناء القوى العاملة في قطاع الفعاليات</span><span data-en>Building Saudi Arabia's events workforce</span></h3>
+          <p><span data-ar>تولّد عملياتنا فرص عمل على كل المستويات: عقود مشاريع مرنة لطواقم الفعاليات والمنسّقين، وعقود سنوية لتشغيل المواقع، وتمكين مزوّدي الخدمات المستقلين، أفراداً وشركات، بدمجهم موردين وشركاء إبداع.</span><span data-en>Our operations generate employment at every level: flexible project-based contracts for event staff and coordinators, annual contracts for ongoing venue operations, and empowering independent service providers, individuals and companies, by integrating them as vendors, suppliers and creative partners.</span></p>
+        </article>
+        <article class="v2030-point reveal">
+          <h3><span data-ar>تعزيز الروابط المجتمعية</span><span data-en>Strengthening community bonds</span></h3>
+          <p><span data-ar>كل فعالية ننفّذها، لعميل مؤسسي أو للجمهور العام، تصنع مساحة للتواصل والاحتفاء والتعبير الثقافي. تفعيلاتنا تعزّز التفاعل الاجتماعي حيث يعيش الناس ويتسوّقون ويجتمعون، وتُسهم في جودة الحياة في أنحاء المملكة.</span><span data-en>Every event we deliver, whether for a corporate client or the general public, creates a space for connection, celebration and cultural expression. Our activations foster social interaction in the places where people live, shop and gather, contributing to quality of life across the Kingdom.</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ [11] CTA BAND ============================ -->
+  <section class="section cta-band">
+    <span class="glow glow--magenta" style="width:560px;height:340px;top:50%;left:50%;transform:translate(-50%,-50%)" aria-hidden="true"></span>
+    <div class="container">
+      <h2 class="reveal"><span data-ar>انطلق بفعاليتك القادمة.. برؤية واثقة</span><span data-en>Start your next event with confidence</span></h2>
+      <p class="reveal"><span data-ar>نعمل جنباً إلى جنب مع المنظمات التي تنشد الدقة في التنفيذ، والانسجام مع العلامة التجارية، والتميز في المخرجات المهنية.</span><span data-en>We work alongside organizations that expect precision in delivery, alignment with the brand, and excellence in professional outcomes.</span></p>
+      <a href="#contact" class="btn btn--solid reveal"><span data-ar>ابدأ مشروعك</span><span data-en>Start a project</span></a>
+    </div>
+  </section>
+
+  <!-- ============================ [12] NEWS ============================ -->
+  <section class="section" id="news">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span data-ar>آخر الأخبار</span><span data-en>Latest news</span></span>
+        <h2><span data-ar>ماذا يجري في <span class="accent">مود إيفنت</span></span><span data-en>What's happening at <span class="accent">Mood Event</span></span></h2>
+      </div>
+      <div class="news-grid" id="news-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============================ [13] CONTACT ============================ -->
+  <section class="section contact" id="contact">
+    <span class="glow glow--violet" style="width:420px;height:420px;bottom:-80px;inset-inline-start:-120px" aria-hidden="true"></span>
+    <div class="container">
+      <div class="split">
+
+        <div class="contact-info reveal">
+          <span class="eyebrow"><span data-ar>تواصل معنا</span><span data-en>Get in touch</span></span>
+          <h2><span data-ar>أخبرنا عن <span class="accent">فعاليتك</span></span><span data-en>Tell us about your <span class="accent">event</span></span></h2>
+          <p class="lead"><span data-ar>شارك تفاصيل فعاليتك القادمة، وسيعود إليك فريق مود إيفنت بخطة تنفيذ واضحة وجدول زمني.</span><span data-en>Share the details of your next event and the Mood Event team will come back with a clear delivery plan and timeline.</span></p>
+          <ul class="contact-list">
+            <li>
+              <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" stroke="currentColor" stroke-width="1.6"/></svg></span>
+              <a href="https://www.moodevent.net" target="_blank" rel="noopener">www.moodevent.net</a>
+            </li>
+            <li>
+              <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></span>
+              <span dir="ltr">@moodevent.sa</span>
+            </li>
+            <li>
+              <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3l3 5-2 2a12 12 0 006 6l2-2 5 3-1 4a2 2 0 01-2 1C10 25 0 14 1 5a2 2 0 011-2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+              <a href="tel:+966502220776" dir="ltr">+966 50 222 0776</a>
+            </li>
+            <li>
+              <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6-7-12a7 7 0 0114 0c0 6-7 12-7 12z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg></span>
+              <span><span data-ar>المملكة العربية السعودية</span><span data-en>Saudi Arabia</span></span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <div class="form-success" id="form-success">
+            <span data-ar>تم استلام طلبك. سيتواصل معك فريق مود إيفنت قريباً.</span>
+            <span data-en>Your request has been received. The Mood Event team will contact you shortly.</span>
+          </div>
+
+          <div class="field row">
+            <div class="field">
+              <label for="f-name"><span data-ar>الاسم الكامل</span><span data-en>Full name</span></label>
+              <input type="text" id="f-name" name="name" autocomplete="name" required />
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="f-company"><span data-ar>جهة العمل</span><span data-en>Company</span></label>
+              <input type="text" id="f-company" name="company" autocomplete="organization" required />
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="field row">
+            <div class="field">
+              <label for="f-email"><span data-ar>البريد الإلكتروني للعمل</span><span data-en>Work email</span></label>
+              <input type="email" id="f-email" name="email" autocomplete="email" data-validate="email" required />
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="f-phone"><span data-ar>رقم الهاتف</span><span data-en>Phone</span></label>
+              <input type="tel" id="f-phone" name="phone" autocomplete="tel" dir="ltr" data-validate="phone" required />
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f-need"><span data-ar>نوع الاحتياج</span><span data-en>Need type</span></label>
+            <select id="f-need" name="need" data-i18n-select required>
+              <option value="" data-ar="اختر…" data-en="Choose…">اختر…</option>
+              <option value="internal" data-ar="فعاليات الشركات الداخلية" data-en="Internal corporate events">فعاليات الشركات الداخلية</option>
+              <option value="booths" data-ar="أجنحة ومنصات المعارض" data-en="Booths &amp; exhibition stands">أجنحة ومنصات المعارض</option>
+              <option value="external" data-ar="الفعاليات الخارجية وفعاليات العلامة التجارية" data-en="External &amp; brand events">الفعاليات الخارجية وفعاليات العلامة التجارية</option>
+            </select>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="f-details"><span data-ar>تفاصيل المشروع</span><span data-en>Project details</span></label>
+            <textarea id="f-details" name="details" required></textarea>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+
+          <button type="submit" class="btn btn--solid" style="width:100%;justify-content:center">
+            <span data-ar>أرسل الطلب</span><span data-en>Send request</span>
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============================ [14] FOOTER ============================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="brand" aria-label="Mood Event home">
+            <img class="brand-mark" src="images/logo-mark.png" alt="" />
+          </a>
+          <p><span data-ar>شركة إدارة فعاليات قائمة على التجربة في المملكة العربية السعودية.</span><span data-en>An experience-led event management company in Saudi Arabia.</span></p>
+          <div class="iso-badges">
+            <span class="iso-badge">ISO 9001</span>
+            <span class="iso-badge">ISO 45001</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4><span data-ar>الشركة</span><span data-en>Company</span></h4>
+          <a href="#about"><span data-ar>من نحن</span><span data-en>About</span></a>
+          <a href="#about"><span data-ar>قصتنا</span><span data-en>Our story</span></a>
+          <a href="#pillars"><span data-ar>ركائزنا</span><span data-en>Our pillars</span></a>
+          <a href="#news"><span data-ar>الأخبار</span><span data-en>News</span></a>
+        </div>
+
+        <div class="footer-col">
+          <h4><span data-ar>الخدمات</span><span data-en>Services</span></h4>
+          <a href="#services"><span data-ar>فعاليات الشركات</span><span data-en>Corporate events</span></a>
+          <a href="#services"><span data-ar>أجنحة المعارض</span><span data-en>Exhibition booths</span></a>
+          <a href="#services"><span data-ar>الفعاليات الخارجية</span><span data-en>External events</span></a>
+          <a href="#services"><span data-ar>الضيافة</span><span data-en>Hospitality</span></a>
+        </div>
+
+        <div class="footer-col">
+          <h4><span data-ar>روابط</span><span data-en>Links</span></h4>
+          <a href="#work"><span data-ar>أعمالنا</span><span data-en>Our work</span></a>
+          <a href="#process"><span data-ar>آلية العمل</span><span data-en>Process</span></a>
+          <a href="mood-camp.html"><span data-ar>مود كامب</span><span data-en>Mood Camp</span></a>
+          <a href="days-calendar.html"><span data-ar>روزنامة الأيام العالمية</span><span data-en>World Days Calendar</span></a>
+          <a href="#contact"><span data-ar>تواصل معنا</span><span data-en>Contact</span></a>
+          <a href="tel:+966502220776" dir="ltr">+966 50 222 0776</a>
+          <a href="https://www.moodevent.net" target="_blank" rel="noopener">www.moodevent.net</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> <span data-ar>مود إيفنت. جميع الحقوق محفوظة.</span><span data-en>Mood Event. All rights reserved.</span></span>
+        <span dir="ltr">@moodevent.sa</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/966502220776" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب / Chat on WhatsApp">
+    <span class="wa-float-ico" aria-hidden="true"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.004 0h-.008C7.174 0 .001 7.176.001 16c0 3.498 1.13 6.744 3.049 9.38L1.05 31.373l6.2-1.982A15.9 15.9 0 0 0 16.004 32C24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.318 22.594c-.386 1.09-1.918 1.994-3.14 2.258-.836.178-1.928.32-5.604-1.204-4.7-1.948-7.726-6.724-7.962-7.034-.226-.31-1.9-2.53-1.9-4.826 0-2.296 1.166-3.424 1.636-3.904.386-.394.998-.574 1.586-.574.19 0 .362.01.516.018.454.02.682.046.98.762.372.898 1.28 3.194 1.388 3.424.11.23.22.54.07.85-.14.32-.264.454-.494.72-.23.266-.438.47-.668.756-.21.248-.446.514-.18.972.266.448 1.184 1.95 2.54 3.16 1.75 1.56 3.192 2.05 3.694 2.26.376.156.822.12 1.096-.176.35-.376.782-1 1.222-1.616.312-.44.706-.494 1.12-.34.42.144 2.656 1.252 3.11 1.478.454.226.756.336.868.522.11.186.11 1.076-.276 2.166z"/></svg></span>
+    <span class="wa-float-tip"><span data-ar>تواصل واتساب</span><span data-en>Chat on WhatsApp</span></span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
