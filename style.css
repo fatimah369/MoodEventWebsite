@@ -660,6 +660,19 @@ html[dir="rtl"] .subpage-back svg{transform:scaleX(-1)}
   border-radius:12px;padding:16px 18px;color:var(--lilac);font-size:.92rem;margin-bottom:18px;
 }
 .form-success.show{display:block}
+.form-error{
+  display:none;background:rgba(200,31,94,.08);border:1px solid rgba(200,31,94,.35);
+  border-radius:12px;padding:16px 18px;color:#c81f5e;font-size:.92rem;margin-bottom:18px;
+}
+.form-error.show{display:block}
+
+/* Lead-magnet form (days-calendar.html) */
+.lead-head{max-width:640px;margin:0 auto 28px;text-align:center}
+.lead-head .eyebrow{display:block;margin-bottom:10px}
+.lead-head h2{font-size:clamp(1.5rem,3.5vw,2.1rem);margin-bottom:12px}
+.lead-head p{color:var(--text-dim)}
+.lead-form{max-width:640px;margin:0 auto;text-align:start}
+.lead-hp{position:absolute;inset-inline-start:-9999px;width:1px;height:1px;overflow:hidden}
 
 /* =========================================================
    [14] FOOTER

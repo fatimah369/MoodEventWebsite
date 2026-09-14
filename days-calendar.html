@@ -288,12 +288,67 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="section cta-band">
+  <!-- LEAD MAGNET · get the calendar for your industry -->
+  <section class="section cta-band" id="get-calendar">
     <span class="glow glow--magenta" style="width:560px;height:340px;top:50%;left:50%;transform:translate(-50%,-50%)" aria-hidden="true"></span>
     <div class="container">
-      <h2><span data-ar>لا تفوّت المناسبة القادمة</span><span data-en>Don't miss the next occasion</span></h2>
-      <a href="index.html#contact" class="btn btn--solid"><span data-ar>تواصل معنا</span><span data-en>Get in touch</span></a>
+      <div class="lead-head reveal">
+        <span class="eyebrow"><span data-ar>عرض حصري</span><span data-en>Exclusive</span></span>
+        <h2><span data-ar>احصل على روزنامة أيامك العالمية حسب قطاعك</span><span data-en>Get your industry's world days calendar</span></h2>
+        <p><span data-ar>اختر قطاعك وأدخل بريدك الرسمي ومسماك الوظيفي، وسنرسل لك ملفاً مخصصاً بأهم الأيام العالمية والوطنية لقطاعك خلال 2026.</span><span data-en>Pick your industry and enter your company email and job title, and we'll send you a file with the world and national days that matter most to your sector in 2026.</span></p>
+      </div>
+
+      <form class="form lead-form reveal" id="lead-form" novalidate>
+        <div class="form-success" id="lead-success">
+          <span data-ar>تم الإرسال! سنرسل الملف إلى بريدك خلال دقائق.</span>
+          <span data-en>Submitted! We'll send the file to your inbox shortly.</span>
+        </div>
+        <p class="form-error" id="lead-error" role="alert">
+          <span data-ar>حدث خطأ في الإرسال، حاول مرة أخرى أو تواصل معنا مباشرة.</span>
+          <span data-en>Something went wrong, please try again or contact us directly.</span>
+        </p>
+
+        <div class="field row">
+          <div class="field">
+            <label for="l-industry"><span data-ar>القطاع</span><span data-en>Industry</span></label>
+            <select id="l-industry" name="industry" data-i18n-select required>
+              <option value="" data-ar="اختر قطاعك…" data-en="Choose your industry…">اختر قطاعك…</option>
+              <option value="healthcare" data-ar="الرعاية الصحية" data-en="Healthcare">الرعاية الصحية</option>
+              <option value="oil-gas" data-ar="النفط والغاز" data-en="Oil &amp; Gas">النفط والغاز</option>
+              <option value="real-estate" data-ar="العقارات" data-en="Real Estate">العقارات</option>
+              <option value="tech" data-ar="التقنية" data-en="Tech">التقنية</option>
+              <option value="other" data-ar="أخرى" data-en="Other">أخرى</option>
+            </select>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="l-title"><span data-ar>المسمى الوظيفي</span><span data-en>Job title</span></label>
+            <input type="text" id="l-title" name="title" autocomplete="organization-title" required />
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <div class="field" id="l-industry-other-field" hidden>
+          <label for="l-industry-other"><span data-ar>حدد قطاعك</span><span data-en>Please specify your industry</span></label>
+          <input type="text" id="l-industry-other" name="industryOther" />
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="l-email"><span data-ar>البريد الإلكتروني الرسمي</span><span data-en>Company email</span></label>
+          <input type="email" id="l-email" name="email" autocomplete="email" data-validate="email" required />
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field lead-hp" aria-hidden="true">
+          <label for="l-website"><span data-ar>الموقع الإلكتروني</span><span data-en>Website</span></label>
+          <input type="text" id="l-website" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <button type="submit" class="btn btn--solid" style="width:100%;justify-content:center">
+          <span data-ar>أرسل لي الروزنامة</span><span data-en>Send me the calendar</span>
+        </button>
+      </form>
     </div>
   </section>
 
