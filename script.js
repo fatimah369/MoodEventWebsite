@@ -107,7 +107,7 @@
      --------------------------------------------------------- */
   var scProjects = [
     {
-      img: 'images/event-shorofat-park.jpg',
+      img: 'images/project-shorofat-park-entrance-2026.jpg',
       cat: { ar: 'فعالية عامة', en: 'Public Event' },
       client: { ar: 'منتزه شرفات', en: 'Shorofat Park' },
       name: { ar: 'منتزه شرفات · عيد الفطر 2026', en: 'Shorofat Park · Eid Al Fitr 2026' },
@@ -118,7 +118,6 @@
       },
       metrics: [
         { v: { ar: 'يومان', en: '2 Days' }, l: { ar: 'مدة التشغيل', en: 'Run time' } },
-        { v: { ar: '30 ألف', en: '30K' }, l: { ar: 'زائر', en: 'Visitors' } },
         { v: { ar: 'كامل', en: 'Turnkey' }, l: { ar: 'نطاق العمل', en: 'Scope' } }
       ],
       highlights: [
@@ -682,15 +681,13 @@
   }
 
   /* ---------------------------------------------------------
-     6. CONTACT FORM · custom validation, no native tooltips
+     6. FORMS · shared validation, no native tooltips
      --------------------------------------------------------- */
-  var form = document.getElementById('contact-form');
-
   var messages = {
     required: { ar: 'هذا الحقل مطلوب', en: 'This field is required' },
     email:    { ar: 'يرجى إدخال بريد إلكتروني صحيح', en: 'Please enter a valid email address' },
     phone:    { ar: 'يرجى إدخال رقم هاتف صحيح', en: 'Please enter a valid phone number' },
-    select:   { ar: 'يرجى اختيار نوع الاحتياج', en: 'Please choose a need type' }
+    select:   { ar: 'يرجى الاختيار من القائمة', en: 'Please make a selection' }
   };
 
   function currentLang() { return html.getAttribute('dir') === 'rtl' ? 'ar' : 'en'; }
@@ -736,7 +733,8 @@
     return true;
   }
 
-  if (form) {
+  function wireForm(form, onValid) {
+    if (!form) return;
     // block native validation UI
     form.setAttribute('novalidate', 'novalidate');
 
@@ -757,21 +755,93 @@
         if (!validateField(field)) { ok = false; if (!firstBad) firstBad = field; }
       });
 
-      var success = document.getElementById('form-success');
+      var success = form.querySelector('.form-success');
+      var error = form.querySelector('.form-error');
+      if (error) error.classList.remove('show');
       if (!ok) {
-        success.classList.remove('show');
+        if (success) success.classList.remove('show');
         if (firstBad) {
           var fi = firstBad.querySelector('input,select,textarea');
           if (fi) fi.focus();
         }
         return;
       }
-      form.reset();
+      onValid(form, success, error);
+    });
+  }
+
+  function showFormSuccess(form, success) {
+    form.reset();
+    if (success) {
       success.classList.add('show');
       success.setAttribute('role', 'status');
       success.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+    }
+  }
+
+  wireForm(document.getElementById('contact-form'), showFormSuccess);
+
+  /* ---------------------------------------------------------
+     6b. LEAD MAGNET FORM (days-calendar.html)
+     Posts the pick to a Zapier "Catch Hook" webhook. Set up a
+     Zap there that reads the "industry" field and emails back
+     the matching file. Paste the Catch Hook URL below once
+     that Zap exists — until then, submissions are only logged
+     to the console so the form still demoes correctly.
+     --------------------------------------------------------- */
+  var LEAD_WEBHOOK_URL = ''; // e.g. https://hooks.zapier.com/hooks/catch/XXXXXXX/XXXXXXX/
+
+  var leadIndustrySelect = document.getElementById('l-industry');
+  var leadOtherField = document.getElementById('l-industry-other-field');
+  var leadOtherInput = document.getElementById('l-industry-other');
+  if (leadIndustrySelect && leadOtherField && leadOtherInput) {
+    leadIndustrySelect.addEventListener('change', function () {
+      var isOther = leadIndustrySelect.value === 'other';
+      leadOtherField.hidden = !isOther;
+      if (isOther) {
+        leadOtherInput.setAttribute('required', 'required');
+      } else {
+        leadOtherInput.removeAttribute('required');
+        leadOtherInput.value = '';
+        clearError(leadOtherField);
+      }
     });
   }
+
+  wireForm(document.getElementById('lead-form'), function (form, success, error) {
+    var hp = form.querySelector('[name="website"]');
+    if (hp && hp.value) return; // honeypot tripped, drop silently
+
+    var data = {
+      industry: form.querySelector('[name="industry"]').value,
+      industryOther: form.querySelector('[name="industryOther"]').value,
+      title: form.querySelector('[name="title"]').value,
+      email: form.querySelector('[name="email"]').value,
+      page: location.href,
+      submittedAt: new Date().toISOString()
+    };
+
+    if (!LEAD_WEBHOOK_URL) {
+      console.warn('Lead form: set LEAD_WEBHOOK_URL in script.js to enable real submissions.', data);
+      showFormSuccess(form, success);
+      return;
+    }
+
+    var btn = form.querySelector('button[type="submit"]');
+    if (btn) btn.disabled = true;
+    fetch(LEAD_WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function (res) {
+      if (!res.ok) throw new Error('bad response');
+      showFormSuccess(form, success);
+    }).catch(function () {
+      if (error) error.classList.add('show');
+    }).finally(function () {
+      if (btn) btn.disabled = false;
+    });
+  });
 
   /* ---------------------------------------------------------
      7. FOOTER YEAR
