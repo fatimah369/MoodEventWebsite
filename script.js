@@ -186,7 +186,7 @@
       ]
     },
     {
-      img: 'images/project-tahakkum-engagement.svg',
+      img: 'images/project-tahakkum-arch.jpg',
       cat: { ar: 'إشراك الموظفين', en: 'Employee Engagement' },
       client: { ar: 'تحكّم', en: 'Tahakkum' },
       name: { ar: 'تحكّم · برنامج إشراك الموظفين', en: 'Tahakkum · Employee Engagement' },
@@ -779,7 +779,11 @@
     }
   }
 
-  wireForm(document.getElementById('contact-form'), showFormSuccess);
+  wireForm(document.getElementById('contact-form'), function (form, success) {
+    var hp = form.querySelector('[name="website"]');
+    if (hp && hp.value) return; // honeypot tripped, drop silently
+    showFormSuccess(form, success);
+  });
 
   /* ---------------------------------------------------------
      6b. LEAD MAGNET FORM (days-calendar.html)
@@ -841,6 +845,34 @@
     }).finally(function () {
       if (btn) btn.disabled = false;
     });
+  });
+
+  /* ---------------------------------------------------------
+     6c. BOOTH INQUIRY FORM (booths.html)
+     No backend needed: opens a prefilled mailto: to sales@moodevent.net
+     with the submitted details.
+     --------------------------------------------------------- */
+  wireForm(document.getElementById('booth-lead-form'), function (form, success) {
+    var hp = form.querySelector('[name="website"]');
+    if (hp && hp.value) return; // honeypot tripped, drop silently
+
+    var name = form.querySelector('[name="name"]').value;
+    var company = form.querySelector('[name="company"]').value;
+    var email = form.querySelector('[name="email"]').value;
+    var phone = form.querySelector('[name="phone"]').value;
+    var message = form.querySelector('[name="message"]').value;
+
+    var subject = encodeURIComponent('Booth inquiry from ' + (company || name));
+    var body = encodeURIComponent(
+      'Name: ' + name + '\n' +
+      'Company: ' + company + '\n' +
+      'Email: ' + email + '\n' +
+      'Phone: ' + phone + '\n\n' +
+      message
+    );
+    window.location.href = 'mailto:sales@moodevent.net?subject=' + subject + '&body=' + body;
+
+    showFormSuccess(form, success);
   });
 
   /* ---------------------------------------------------------
